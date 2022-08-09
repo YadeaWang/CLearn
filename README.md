@@ -1,3 +1,2 @@
 # CLearn
-Study materials of c++
-I'm main.
+Study materials of c++ and cmake
