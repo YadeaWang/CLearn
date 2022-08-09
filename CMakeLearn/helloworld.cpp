@@ -1,10 +1,13 @@
 #include <string>
 #include <iostream>
-#include <cstdlib>
-
-std::string say_hello() { return std::string("Hello, CMake world!"); }
+#include "message.hpp"
 
 int main() {
-    std::cout << say_hello() << std::endl;
+    Message say_hello("Hello, CMake World!");
+    std::cout << say_hello << std::endl;
+    
+    Message say_goodbye("Goodbye, Cmake world!");
+    std::cout << say_goodbye << std::endl;
+    
     return EXIT_SUCCESS;
 }

@@ -1,3 +1,5 @@
-tasks.json
 *.bin
 .vscode
+.idea
+build
+

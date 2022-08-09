@@ -6,7 +6,6 @@ using namespace std;
 
 int Collatz(int val, std::vector<int>& memo);
 const int MAX_RANGE = 10000;
-int cnt = 0;
 
 int main()
 {
