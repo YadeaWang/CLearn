@@ -22,8 +22,7 @@ target_compile_options(geometry
         ${flags}
 )
 
-add_executable(compute-areas compute-areas.cpp)
-
+# chapter1.8
 set(COMPILER_FLAGS)
 set(COMPILER_FLAGS_DEBUG)
 set(COMPILER_FLAGS_RELEASE)
@@ -39,6 +38,10 @@ if(CMAKE_CXX_COMPILER_ID MATCHES Clang)
     list(APPEND CXX_FLAGS_DEBUG "-Wdocumentation")
     list(APPEND CXX_FLAGS_RELEASE "-O3" "-Wno-unused")
 endif()
+
+add_executable(
+    compute-areas compute-areas.cpp
+)
 
 target_compile_options(compute-areas
     PRIVATE
