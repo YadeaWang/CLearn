@@ -1,0 +1,30 @@
+.
+├── CMakeLists.txt
+├── external
+│    ├── CMakeLists.txt
+│    ├── conversion.cpp
+│    ├── conversion.hpp
+│    └── README.md
+├── src
+│    ├── CMakeLists.txt
+│    ├── evolution
+│    │    ├── CMakeLists.txt
+│    │    ├── evolution.cpp
+│    │    └── evolution.hpp
+│    ├── initial
+│    │    ├── CMakeLists.txt
+│    │    ├── initial.cpp
+│    │    └── initial.hpp
+│    ├── io
+│    │    ├── CMakeLists.txt
+│    │    ├── io.cpp
+│    │    └── io.hpp
+│    ├── main.cpp
+│    └── parser
+│        ├── CMakeLists.txt
+│        ├── parser.cpp
+│        └── parser.hpp
+└── tests
+    ├── catch.hpp
+    ├── CMakeLists.txt
+    └── test.cpp
