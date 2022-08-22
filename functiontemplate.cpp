@@ -1,3 +1,4 @@
+#include <iostream>
 
 // 一个参数的函数模板
 template <typename T>
@@ -27,3 +28,8 @@ auto larger(T1 a, T2 b)
 //     return a > b ? a : b;
 // }
 
+int main()
+{
+    std::cout << larger(1.5, 2.5) << std::endl;
+    std::cout << larger(1.5, 2) << std::endl; // auto implement funcation
+}

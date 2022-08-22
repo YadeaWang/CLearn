@@ -2,29 +2,38 @@
 #include <vector>
 #include <algorithm>
 
-template <typename T>
-std::ostream &printArray(std::ostream &os, T &array)
+template <typename ostream, typename container>
+void printArray(ostream& os, container& arr)
 {
-    size_t len = sizeof(array) / sizeof(array[0]);
-    for (size_t i = 0; i < len; i++)
-    {
-        os << array[i] << "\t";
-    }
+    for(auto val : arr)
+        os << val << "\t";
 
     os << std::endl;
-    return os;
 }
 
-template <typename T>
-std::ostream &printArray(std::ostream &os, std::vector<T> &array)
-{
-    std::for_each(array.begin(), array.end(),
-                [&os](auto value)
-                { os << value << "\t"; });
+// template <typename T>
+// std::ostream &printArray(std::ostream &os, T &array)
+// {
+//     size_t len = sizeof(array) / sizeof(array[0]);
+//     for (size_t i = 0; i < len; i++)
+//     {
+//         os << array[i] << "\t";
+//     }
 
-    os << std::endl;
-    return os;
-}
+//     os << std::endl;
+//     return os;
+// }
+
+// template <typename T>
+// std::ostream &printArray(std::ostream &os, std::vector<T> &array)
+// {
+//     std::for_each(array.begin(), array.end(),
+//                 [&os](auto value)
+//                 { os << value << "\t"; });
+
+//     os << std::endl;
+//     return os;
+// }
 
 int main()
 {
