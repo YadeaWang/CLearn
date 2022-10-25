@@ -8,7 +8,7 @@ using namespace std;
 class Base {
 public:
     Base() {ptr = new int(5);}
-    ~Base() {
+    virtual ~Base() {
         if (ptr)
             delete ptr;
         ptr = nullptr;
