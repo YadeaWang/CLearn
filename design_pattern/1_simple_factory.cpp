@@ -6,9 +6,14 @@ using namespace std;
 class operation
 {
 public:
-    virtual double getResult() const;
-    void setX(double x) { x = x; }
-    void setY(double y) { y = y; }
+    /**
+     * 任何一个函数都不能只有声明，没有实现！virtual函数也一样。
+     * 如果要求所有子类都各自override，那应该设为纯虚函数；
+     * 如果有默认实现，那就应该写{...}
+     */
+    virtual double getResult() const = 0;
+    void setX(double x) { this->x = x; }
+    void setY(double y) { this->y = y; }
     double getX() const { return x; }
     double getY() const { return y; }
 private:
@@ -18,21 +23,21 @@ private:
 
 class operationAdd : public operation
 {
-    double getResult() const {
+    double getResult() const override{
         return getX() + getY();
     }
 };
 
 class operationSub : public operation
 {
-    double getResult() const {
+    double getResult() const override{
         return getX() - getY();
     }
 };
 
 class operationMul : public operation
 {
-    double getResult() const {
+    double getResult() const override{
         return getX() * getY();
     }
 };
