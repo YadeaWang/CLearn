@@ -1,0 +1,10 @@
+[requires]
+boost/1.78.0
+cpp-httplib/0.10.7
+json-schema-validator/2.1.0
+libgettext/0.21
+nlohmann_json/3.10.5
+spdlog/1.10.0
+
+[generators]
+cmake
