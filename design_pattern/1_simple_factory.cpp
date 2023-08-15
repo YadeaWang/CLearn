@@ -42,6 +42,7 @@ class operationMul : public operation
     }
 };
 
+/* 工厂类中包含了必要的逻辑判断，对客户端来说隐匿了与具体类的依赖 */
 class operationFactory
 {
 public:
