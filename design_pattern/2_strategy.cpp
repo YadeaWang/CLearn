@@ -5,13 +5,13 @@ class cash_base
 {
 public:
 	virtual ~cash_base() = default;
-	virtual double GetResult(double total_money)const = 0;
+	virtual double GetResult(double total_money) const = 0;
 };
 
 class cash_normal : public cash_base
 {
 public:
-	virtual double GetResult(double total_money)const override
+	double GetResult(double total_money) const override
 	{
 		return total_money;
 	}
@@ -26,7 +26,7 @@ public:
 
 	}
 
-	virtual double GetResult(double total_money)const override
+	double GetResult(double total_money) const override
 	{
 		return total_money * m_discount;
 	}
@@ -44,7 +44,7 @@ public:
 
 	}
 
-	virtual double GetResult(double total_money)const override
+	double GetResult(double total_money) const override
 	{
 		if (total_money >= m_cash_radix)
 		{
@@ -53,8 +53,7 @@ public:
 		
 		return total_money;
 	}
-protected:
-
+	
 private:
 	double m_cash_radix;
 	double m_cash_revert;
